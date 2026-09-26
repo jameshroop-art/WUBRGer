@@ -1,4 +1,5 @@
 import { defaultPrinting, printingById, printingsByOracle } from "@/lib/catalog";
+import { combosForOracle, comboNamePieces } from "@/lib/combos";
 import { priceForPrinting, useBinder, ownedQtyForOracle } from "@/lib/binder-store";
 import { ageLabel, cn, formatUsd } from "@/lib/utils";
 import { CardArt } from "@/components/card-tile";
@@ -11,6 +12,7 @@ const TABS: { id: CardSheetTab; label: string }[] = [
   { id: "market", label: "Market" },
   { id: "play", label: "Play" },
   { id: "rules", label: "Rules" },
+  { id: "combo", label: "Combo" },
 ];
 
 const RULINGS: Record<string, string[]> = {
@@ -172,6 +174,42 @@ export function CardSheet() {
                   </li>
                 ))}
               </ul>
+            </div>
+          ) : null}
+
+          {tab === "combo" ? (
+            <div className="space-y-3">
+              {(() => {
+                const recipes = combosForOracle(p.oracle_id);
+                if (!recipes.length) {
+                  return (
+                    <p className="text-sm text-muted">
+                      No known combos for this card in the local recipes.
+                    </p>
+                  );
+                }
+                return (
+                  <ul className="space-y-3">
+                    {recipes.map((c) => (
+                      <li key={c.id} className="rounded-md bg-raised p-3 ring-1 ring-border">
+                        <p className="font-medium">{c.name}</p>
+                        <p className="mt-1 text-sm text-muted">{c.results}</p>
+                        <p className="mt-1 text-xs text-faint">
+                          pieces · {comboNamePieces(c).join(" · ")}
+                        </p>
+                        <ol className="mt-2 list-decimal space-y-1 pl-4 text-sm leading-relaxed text-fg/90">
+                          {c.steps.map((step) => (
+                            <li key={step}>{step}</li>
+                          ))}
+                        </ol>
+                        <p className="mt-2 text-xs text-faint">
+                          bracket {c.bracket} · popularity {c.popularity}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              })()}
             </div>
           ) : null}
         </div>
