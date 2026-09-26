@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "WUBRGer",
+      "hasCanvas": false,
+      "bodyTextLen": 999,
+      "bodyTextHash": "2e6de2b5c91880d885fe3dfa45b7aa402a13e8fb801f3f9ac8495f89ba7f8dfd",
+      "bodyTextPrefix": "WUBRGer Policy BINDER Your printings 56 copies · keyed by Scryfa",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/preview-prod.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "WUBRGer",
+      "hasCanvas": false,
+      "bodyTextLen": 999,
+      "bodyTextHash": "2e6de2b5c91880d885fe3dfa45b7aa402a13e8fb801f3f9ac8495f89ba7f8dfd",
+      "bodyTextPrefix": "WUBRGer Policy BINDER Your printings 56 copies · keyed by Scryfa",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/preview-prod-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/preview-prod.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

@@ -1,0 +1,1 @@
+CollectorVision (https://github.com/HanClinto/CollectorVision) AGPL-3.0. Models: cornelius/fastweb detector + milo embedder. Catalog: Scryfall MTG embeddings bundled for on-device match.

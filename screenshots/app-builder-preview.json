@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "WUBRGer",
+      "hasCanvas": false,
+      "bodyTextLen": 999,
+      "bodyTextHash": "2e6de2b5c91880d885fe3dfa45b7aa402a13e8fb801f3f9ac8495f89ba7f8dfd",
+      "bodyTextPrefix": "WUBRGer Policy BINDER Your printings 56 copies · keyed by Scryfa",
+      "horizontalOverflow": false,
+      "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <MatchView router={{...}} match={{id:\"//\",ssr:true, ...}}>\n      <SafeFragment>\n        <SafeFragment fallback={null}>\n          <CatchBoundary getResetKey={function getResetKey} errorComponent={function AppErrorComponent} ...>\n            <SafeFragment fallback={function fallback}>\n              <MatchInnerImpl match={{id:\"//\",ssr:true, ...}}>\n                <Lazy>\n                  <Home>\n                    <AppShell>\n                      <div className=\"mx-auto fl...\">\n                        <div>\n                        <div className=\"flex min-h...\">\n                          <BinderView>\n                            <div className=\"flex min-h...\">\n                              <header className=\"shrink-0 p...\">\n                                <p>\n                                <h1>\n                                <p>\n                                <input\n                                  value=\"\"\n                                  onChange={function onChange}\n                                  placeholder=\"Search name, set, number\"\n                                  className=\"mt-3 h-11 w-full rounded-md bg-raised px-3 text-sm text-fg outline-none r...\"\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                                ...\n                              ...\n                        ...\n"
+      ],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "WUBRGer",
+      "hasCanvas": false,
+      "bodyTextLen": 999,
+      "bodyTextHash": "2e6de2b5c91880d885fe3dfa45b7aa402a13e8fb801f3f9ac8495f89ba7f8dfd",
+      "bodyTextPrefix": "WUBRGer Policy BINDER Your printings 56 copies · keyed by Scryfa",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
