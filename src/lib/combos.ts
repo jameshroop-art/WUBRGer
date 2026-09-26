@@ -1,4 +1,4 @@
-import { oracleIdForName, printingForName } from "@/lib/catalog";
+import { defaultPrinting, oracleIdForName } from "@/lib/catalog";
 import type { ComboRecipe } from "@/lib/types";
 
 function pieces(...names: string[]) {
@@ -148,6 +148,11 @@ export function comboById(id: string) {
   return COMBOS.find((c) => c.id === id);
 }
 
-export function comboNamePieces(combo: ComboRecipe) {
-  return combo.pieces.map((oid) => printingForName("") || oid);
+export function combosForOracle(oracleId: string): ComboRecipe[] {
+  return COMBOS.filter((c) => c.pieces.includes(oracleId));
+}
+
+/** Display names for each oracle_id piece in a recipe. */
+export function comboNamePieces(combo: ComboRecipe): string[] {
+  return combo.pieces.map((oid) => defaultPrinting(oid)?.name ?? oid);
 }

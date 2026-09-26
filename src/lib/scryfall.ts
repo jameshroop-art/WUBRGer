@@ -231,6 +231,13 @@ class ScryfallClient {
       body: JSON.stringify({ identifiers }),
     });
   }
+
+  searchCards(query: string, opts?: { unique?: string; order?: string }) {
+    const unique = opts?.unique ?? "cards";
+    let path = `/cards/search?q=${encodeURIComponent(query)}&unique=${encodeURIComponent(unique)}`;
+    if (opts?.order) path += `&order=${encodeURIComponent(opts.order)}`;
+    return this.request(path);
+  }
 }
 
 export const scryfall = new ScryfallClient();
