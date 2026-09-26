@@ -4,7 +4,7 @@ export type NetworkPolicy = "wifi_only" | "wifi_and_mobile" | "manual";
 export type RootTab = "binder" | "table" | "lens" | "atlas";
 export type BinderSegment = "faces" | "sets" | "value" | "where";
 export type TableSegment = "list" | "own" | "synergy" | "combos" | "power" | "test";
-export type CardSheetTab = "copy" | "print" | "market" | "play" | "rules";
+export type CardSheetTab = "copy" | "print" | "market" | "play" | "rules" | "combo";
 export type Mode = "collect" | "brew" | "play";
 export type BuyPinKind = "suggest" | "combo";
 
